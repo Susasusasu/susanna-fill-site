@@ -79,6 +79,8 @@ export const projects = [
   {
     slug: "swiss-all-the-way", oldSlug: "/swiss",
     client: "SWISS", title: "Swiss all the way.",
+    // Bild 1 bleibt nur Kachelbild auf der Startseite
+    order: ["img2", "img3", "img4", "img5", "img6"],
     images: [
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1725722519826-4ZG8HKL3B33PYCK20QNS/Susanna+Fill+Swiss+Cover.jpg",
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1725722785770-PAQMCQSSWYJ1WG2UMUKW/Susanna+Fill+Swiss+all+the+way.jpg",
