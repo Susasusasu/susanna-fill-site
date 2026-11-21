@@ -69,7 +69,7 @@ export const projects = [
     client: "SWISS", title: "Eishockey WM",
     videos: ["https://vimeo.com/1238704576", "https://vimeo.com/1238708174"],
     // Reihenfolge auf der Projektseite (Bild 1 bleibt nur Kachelbild auf der Startseite)
-    order: ["vid2", "img2", "vid1", "img3"],
+    order: ["vid2", "img2", "img3", "vid1"],
     images: [
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1792743991180-458R7DYCZS1JE9W424QD/image-asset.png",
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1793016048752-J01C455O0Z8CXNZXFPUN/SWI%2BEishockey%2BWM%2B2026%2BPrint%2BAd%2BPerso%CC%88nlich%2B235x320mm2.png",
