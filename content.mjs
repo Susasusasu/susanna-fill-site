@@ -108,6 +108,8 @@ export const projects = [
   {
     slug: "coop-supercard", oldSlug: "/coop-supercard-1",
     client: "COOP", title: "Supercard",
+    // Bild 1 bleibt nur Kachelbild auf der Startseite
+    order: ["vid1", "vid2", "vid3", "vid4"],
     videos: ["https://vimeo.com/796679008", "https://vimeo.com/796678735", "https://vimeo.com/796679074", "https://vimeo.com/796679171"],
     images: [
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1675789330374-902VCHSK31YOUYMJEGR6/Bildschirmfoto+2023-02-07+um+18.00.11.png",
