@@ -159,7 +159,6 @@ const page = (p, i) => {
   <header class="p-head">
     <h1 class="p-client">${esc(p.client)}</h1>
     ${p.title ? `<p class="p-title">${esc(p.title)}</p>` : ""}
-    ${p.agency ? `<p class="p-agency">Agency: <a href="https://www.heimat-berlin.com" target="_blank" rel="noopener">${esc(p.agency)}</a></p>` : ""}
   </header>
   ${p.text ? `<div class="p-text">${p.text.map((t) => `<p>${esc(t)}</p>`).join("")}</div>` : ""}
   <div class="p-media">
