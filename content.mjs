@@ -262,11 +262,8 @@ export const projects = [
   },
   {
     slug: "hornbach-every-change", oldSlug: "/every-change-needs-a-beginning-hornbach",
-    client: "HORNBACH", title: "Every change, needs a beginning",
+    client: "HORNBACH", title: "Every change, needs a beginning.",
     agency: "Heimat Berlin", // www.heimat-berlin.com
-    text: [
-      "PRINT. The goal was to literally “wake up” this dormant potential. Our insight: The first step is the hardest. But once you’ve taken it, the rest usually comes automatically.",
-    ],
     images: [
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1396295908992-TXNR0DTLL6Y7PFW1PXQC/HOR_EB_20x30_1.jpg",
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1396295909047-8F60S0P9IP0CZJ9I8BV5/HOR_EB_20x30_2.jpg",
