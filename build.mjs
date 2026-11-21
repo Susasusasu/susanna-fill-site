@@ -35,7 +35,7 @@ const head = (title, desc = "Susanna Fill – Art Direction") => `<!doctype html
 <a class="skip" href="#main">Zum Inhalt</a>
 <header class="nav">
   <nav class="nav-l" aria-label="Seiten"><a href="/#work">Work</a><a href="/#about">About</a></nav>
-  <a class="nav-c" href="/">Susanna Fill <span class="sl">///</span> Art Direction</a>
+  <a class="nav-c" href="/">Susanna Fill</a>
   <nav class="nav-r" aria-label="Kontakt"><a href="${site.contact.linkedin}" target="_blank" rel="noopener">LinkedIn</a><a href="/#contact">Contact</a></nav>
 </header>
 `;
