@@ -120,9 +120,6 @@ export const projects = [
     client: "COOP", title: "Grill",
     // Bild 1 bleibt nur Kachelbild auf der Startseite
     order: ["vid1", "vid2", "vid3"],
-    text: [
-      "COOP – Mango Jerry",
-    ],
     videos: ["https://vimeo.com/772337629", "https://vimeo.com/772337721", "https://vimeo.com/772337547"],
     images: [
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1668758728868-YS1WHEDEA7IXN0KFL5TT/image-asset.jpg",
