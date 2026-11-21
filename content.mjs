@@ -250,16 +250,8 @@ export const projects = [
   },
   {
     slug: "stern-relaunch", oldSlug: "/the-new-one-relaunch-from-the-magazine-stern",
-    client: "STERN", title: "The things that move us",
+    client: "STERN", title: "The things that move us.",
     agency: "Heimat Berlin", // www.heimat-berlin.com
-    text: [
-      "Follow-up teaser.",
-      "We screen printed the old magazine to promote the new magazine.",
-      "STERN. The things that move us. Sorry Henri Nannen (founder of the magazine), it had to be.",
-      "STERN. The things that move us. Do not fear the new STERN.",
-      "Curious by nature. STERN. The things that move us.",
-      "As long as Germany reads, we'll write. STERN. The things that move us.",
-    ],
     images: [
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1397663795315-DEC5JXMRJQ07UGGGWU7H/150414_stern_making_off.jpg",
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1396296470810-UGH36UT4WXRVJE88SX3Z/nannen.jpg",
