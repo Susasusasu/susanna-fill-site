@@ -60,25 +60,3 @@
   }
 })();
 
-// Work-Kacheln der Printprojekte: beim Hover durch die Motive blättern
-(() => {
-  if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
-  if (!matchMedia("(hover: hover)").matches) return;
-  document.querySelectorAll(".card-img[data-hover]").forEach((box) => {
-    const srcs = JSON.parse(box.dataset.hover);
-    const img = box.querySelector("img");
-    const first = img.src;
-    let timer = null, k = 0, loaded = false;
-    const start = () => {
-      if (!loaded) { srcs.forEach((s) => { const i = new Image(); i.src = s; }); loaded = true; }
-      k = 0;
-      timer = setInterval(() => { k = (k + 1) % srcs.length; img.src = srcs[k]; }, 550);
-    };
-    const stop = () => { clearInterval(timer); timer = null; img.src = first; };
-    const link = box.closest("a");
-    link.addEventListener("pointerenter", start);
-    link.addEventListener("pointerleave", stop);
-    link.addEventListener("focus", start);
-    link.addEventListener("blur", stop);
-  });
-})();

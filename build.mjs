@@ -51,14 +51,11 @@ const foot = `
 
 const arrow = `<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4.5 11.5l7-7M5.5 4.5h6v6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>`;
 
-// Printprojekte (ohne Video): beim Hover durch die Motive blättern
 const card = (p, i) => {
-  const hover = !(p.videos && p.videos.length) && p.images.length > 1
-    ? ` data-hover='${esc(JSON.stringify(p.images.map(thumb)))}'` : "";
   return `
     <li class="card">
       <a href="/${p.slug}">
-        <div class="card-img"${hover}><img src="${thumb(p.images[0])}" alt="${esc(label(p))}" loading="${i < 4 ? "eager" : "lazy"}" width="1600" height="900"></div>
+        <div class="card-img"><img src="${thumb(p.images[0])}" alt="${esc(label(p))}" loading="${i < 4 ? "eager" : "lazy"}" width="1600" height="900"></div>
         <div class="card-meta">
           <h3>${esc(p.client)}</h3>${p.title ? `<p>${esc(p.title)}</p>` : ""}
         </div>
