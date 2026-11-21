@@ -182,6 +182,34 @@ for (const [i, p] of projects.entries()) await writeFile(`${OUT}/${p.slug}.html`
 await writeFile(`${OUT}/404.html`, `${head("Seite nicht gefunden – Susanna Fill", homeDesc, { noindex: true })}<main id="main" class="nf"><h1 class="big">404</h1><p>Diese Seite gibt es nicht mehr.</p><p><a class="cta" href="/#work">Zu den Projekten</a></p></main>${foot}`);
 const vercel = { buildCommand: "node build.mjs", outputDirectory: "out", framework: null, cleanUrls: true, trailingSlash: false, redirects };
 await writeFile("vercel.json", JSON.stringify(vercel, null, 2) + "\n");
+// Schrift-Test für «ART» (nicht verlinkt, nicht bei Google) – nach der Entscheidung wieder löschen
+const serifs = [
+  ["Instrument Serif", "Instrument+Serif:ital@0;1", "400", "normal", true],
+  ["Instrument Serif kursiv", "Instrument+Serif:ital@0;1", "400", "italic", true],
+  ["Instrument Serif kursiv, «Art» klein", "Instrument+Serif:ital@0;1", "400", "italic", false],
+  ["Playfair Display Black", "Playfair+Display:ital,wght@0,900;1,900", "900", "normal", true],
+  ["Playfair Display Black kursiv", "Playfair+Display:ital,wght@0,900;1,900", "900", "italic", true],
+  ["DM Serif Display", "DM+Serif+Display:ital@0;1", "400", "normal", true],
+  ["Fraunces Black", "Fraunces:ital,opsz,wght@0,144,900;1,144,900", "900", "normal", true],
+  ["Bodoni Moda Black kursiv", "Bodoni+Moda:ital,opsz,wght@1,96,900", "900", "italic", true],
+  ["EB Garamond kursiv", "EB+Garamond:ital,wght@1,500", "500", "italic", false],
+];
+const fontsUrl = "https://fonts.googleapis.com/css2?" + [...new Set(serifs.map((s) => s[1]))].map((f) => "family=" + f).join("&") + "&display=swap";
+const testPage = `${head("Schrift-Test ART – Susanna Fill", homeDesc, { path: "/schrift-test", noindex: true, extra: `\n<link href="${fontsUrl}" rel="stylesheet">` })}
+<main id="main" class="font-test">
+  <p class="ft-intro">Schrift-Test: «ART» in verschiedenen Serifenschriften, «DIRECTION» bleibt Inter Black. Sag mir die Nummer, die dir gefällt.</p>
+  <section class="hero ft-hero" style="min-height:auto;padding:60px 24px">
+    <p class="ft-label">0 · Aktuell (Inter Black)</p>
+    <h2 class="name"><span class="art">Art</span><br>Direction</h2>
+  </section>
+${serifs.map(([n, , w, st, upper], i) => `  <section class="hero ft-hero" style="min-height:auto;padding:60px 24px">
+    <p class="ft-label">${i + 1} · ${esc(n)}</p>
+    <h2 class="name"><span style="font-family:'${n.split(/ (Black|kursiv|,)/)[0]}',serif;font-weight:${w};font-style:${st};letter-spacing:-0.01em;${upper ? "" : "text-transform:none;"}">Art</span><br>Direction</h2>
+  </section>`).join("\n")}
+</main>
+${foot}`;
+await writeFile(`${OUT}/schrift-test.html`, testPage);
+
 // Sitemap + robots.txt: Startseite, dann die wichtigsten Projekte, "life" nicht
 const prio = (p) => (FEATURED.includes(p.slug) ? "0.9" : "0.6");
 const urls = [
