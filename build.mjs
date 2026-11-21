@@ -136,6 +136,18 @@ const home = `${head("Susanna Fill – Art Direction", homeDesc, { extra: ld })}
 </main>
 ${foot}`;
 
+// Medien einer Projektseite: Standard = erst Videos, dann Bilder; mit `order` frei mischbar ("img1", "vid2" …)
+const media = (p) => {
+  const vid = (v) => `<div class="video"><iframe src="https://player.vimeo.com/video/${vimeoId(v)}?dnt=1&amp;title=0&amp;byline=0&amp;portrait=0" title="Video ${esc(label(p))}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`;
+  const im = (u, k) => `<img src="${img(u, 2500)}" alt="${esc(label(p))}, Bild ${k + 1}" loading="${k < 2 ? "eager" : "lazy"}">`;
+  const videos = p.videos || [];
+  const order = p.order || [...videos.map((_, k) => `vid${k + 1}`), ...p.images.map((_, k) => `img${k + 1}`)];
+  return order.map((t) => {
+    const n = parseInt(t.slice(3), 10) - 1;
+    return t.startsWith("vid") ? vid(videos[n]) : im(p.images[n], n);
+  });
+};
+
 const page = (p, i) => {
   const next = projects[(i + 1) % projects.length];
   return `${head(`${label(p)} | Susanna Fill, Art Direction`, projDesc(p), { path: `/${p.slug}`, image: p.images[0], noindex: NOINDEX.includes(p.slug) })}
@@ -147,8 +159,7 @@ const page = (p, i) => {
   </header>
   ${p.text ? `<div class="p-text">${p.text.map((t) => `<p>${esc(t)}</p>`).join("")}</div>` : ""}
   <div class="p-media">
-    ${(p.videos || []).map((v) => `<div class="video"><iframe src="https://player.vimeo.com/video/${vimeoId(v)}?dnt=1&amp;title=0&amp;byline=0&amp;portrait=0" title="Video ${esc(label(p))}" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe></div>`).join("\n    ")}
-    ${p.images.map((u, k) => `<img src="${img(u, 2500)}" alt="${esc(label(p))}, Bild ${k + 1}" loading="${k < 2 ? "eager" : "lazy"}">`).join("\n    ")}
+    ${media(p).join("\n    ")}
   </div>
   <a class="next" href="/${next.slug}"><span>Nächstes Projekt</span><strong>${esc(label(next))}</strong></a>
 </main>

@@ -66,11 +66,12 @@ export const projects = [
     slug: "swiss-eishockey-wm", oldSlug: "/swiss-eishockey-wm",
     client: "SWISS", title: "Eishockey WM",
     videos: ["https://vimeo.com/1238704576", "https://vimeo.com/1238708174"],
+    // Reihenfolge auf der Projektseite: Eishockey-WM (Bild, Print, Film), dann Eisrubbeln (Header, Film)
+    order: ["img1", "img2", "vid1", "img3", "vid2"],
     images: [
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1792743991180-458R7DYCZS1JE9W424QD/image-asset.png",
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1793016048752-J01C455O0Z8CXNZXFPUN/SWI%2BEishockey%2BWM%2B2026%2BPrint%2BAd%2BPerso%CC%88nlich%2B235x320mm2.png",
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1792742979719-5A6XOU18S7SU1Q310C05/SWISS+Eishockey+MM+Header+1920x1080px.jpg",
-      "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1792743169092-5KKJDA5A7BCH0TBHY151/image-asset.jpeg",
     ],
   },
   {
