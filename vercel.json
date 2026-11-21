@@ -1,0 +1,89 @@
+{
+  "buildCommand": "node build.mjs",
+  "outputDirectory": "out",
+  "framework": null,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/vielelinien",
+      "destination": "/ochsner-sport-viele-linien",
+      "permanent": true
+    },
+    {
+      "source": "/swiss",
+      "destination": "/swiss-all-the-way",
+      "permanent": true
+    },
+    {
+      "source": "/new-page-3",
+      "destination": "/naturaplan",
+      "permanent": true
+    },
+    {
+      "source": "/coop-supercard-1",
+      "destination": "/coop-supercard",
+      "permanent": true
+    },
+    {
+      "source": "/mcdrive-small-things-make-a-big-difference",
+      "destination": "/mcdrive-my-favorite-restaurant",
+      "permanent": true
+    },
+    {
+      "source": "/mcdrive",
+      "destination": "/mcdrive-small-moments",
+      "permanent": true
+    },
+    {
+      "source": "/act-against-ugliness-hornbach",
+      "destination": "/hornbach-act-against-ugliness",
+      "permanent": true
+    },
+    {
+      "source": "/the-hornbach-hammer",
+      "destination": "/hornbach-hammer",
+      "permanent": true
+    },
+    {
+      "source": "/and-what-will-remain-of-you",
+      "destination": "/hornbach-what-will-remain",
+      "permanent": true
+    },
+    {
+      "source": "/no-one-feels-it-like-you-do-hornbach",
+      "destination": "/hornbach-no-one-feels-it",
+      "permanent": true
+    },
+    {
+      "source": "/the-new-one-relaunch-from-the-magazine-stern",
+      "destination": "/stern-relaunch",
+      "permanent": true
+    },
+    {
+      "source": "/every-change-needs-a-beginning-hornbach",
+      "destination": "/hornbach-every-change",
+      "permanent": true
+    },
+    {
+      "source": "/madness",
+      "destination": "/hornbach-madness",
+      "permanent": true
+    },
+    {
+      "source": "/new-page-1",
+      "destination": "/life",
+      "permanent": true
+    },
+    {
+      "source": "/about",
+      "destination": "/#about",
+      "permanent": true
+    },
+    {
+      "source": "/new-gallery-1",
+      "destination": "/",
+      "permanent": true
+    }
+  ]
+}
