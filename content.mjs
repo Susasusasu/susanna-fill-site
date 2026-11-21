@@ -119,11 +119,11 @@ export const projects = [
     slug: "coop-grill", oldSlug: "/coop-grill",
     client: "COOP", title: "Grill",
     // Bild 1 bleibt nur Kachelbild auf der Startseite
-    order: ["vid1", "vid2", "img2"],
+    order: ["vid1", "vid2", "vid3"],
     text: [
       "COOP – Mango Jerry",
     ],
-    videos: ["https://vimeo.com/772337629", "https://vimeo.com/772337721"],
+    videos: ["https://vimeo.com/772337629", "https://vimeo.com/772337721", "https://vimeo.com/772337547"],
     images: [
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1668758728868-YS1WHEDEA7IXN0KFL5TT/image-asset.jpg",
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/71d709ab-ed3c-4120-b5ed-b08714651bc1/Bildschirmfoto+2022-11-18+um+08.50.00.png",
