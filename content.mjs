@@ -198,12 +198,6 @@ export const projects = [
     slug: "hornbach-act-against-ugliness", oldSlug: "/act-against-ugliness-hornbach",
     client: "HORNBACH", title: "Act against ugliness",
     agency: "Heimat Berlin", // www.heimat-berlin.com
-    text: [
-      "OOH.",
-      "Act against ugliness. It cost's less than you think. HORNBACH. Home Improvement Superstores.",
-      "Own designed trash bags with the message \"Act against ugliness\". HORNBACH. Home Improvement Superstores.",
-      "Special OOH.",
-    ],
     videos: ["https://vimeo.com/104961829"],
     images: [
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1397865063061-UNG4K4QZ7QJ3GCRA1HTE/kampf_gegen_haesslich_die_neue_arbeit_von_heimat_fuer_hornbach_evo_580x326.jpg",
