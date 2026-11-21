@@ -31,13 +31,14 @@ const head = (title, desc = "Susanna Fill – Art Direction") => `<!doctype html
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..900&display=swap" rel="stylesheet">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/style.css">
+<script>try{var t=localStorage.getItem("theme");if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t}catch(e){}</script>
 </head>
 <body>
 <a class="skip" href="#main">Zum Inhalt</a>
 <header class="nav">
   <nav class="nav-l" aria-label="Seiten"><a href="/#work">Work</a><a href="/#about">About</a></nav>
   <a class="nav-c" href="/">Susanna Fill</a>
-  <nav class="nav-r" aria-label="Kontakt"><a href="${site.contact.linkedin}" target="_blank" rel="noopener">LinkedIn</a><a href="/#contact">Contact</a></nav>
+  <nav class="nav-r" aria-label="Kontakt"><a href="${site.contact.linkedin}" target="_blank" rel="noopener">LinkedIn</a><a href="/#contact">Contact</a><button class="theme-toggle" type="button" aria-label="Nachtmodus umschalten">Night</button></nav>
 </header>
 `;
 

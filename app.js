@@ -60,3 +60,17 @@
   }
 })();
 
+
+// Nachtmodus-Umschalter (merkt sich die Wahl im Browser)
+(() => {
+  const btn = document.querySelector(".theme-toggle");
+  if (!btn) return;
+  const root = document.documentElement;
+  const label = () => { btn.textContent = root.dataset.theme === "dark" ? "Day" : "Night"; };
+  label();
+  btn.addEventListener("click", () => {
+    root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
+    try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
+    label();
+  });
+})();
