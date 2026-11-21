@@ -8,3 +8,5 @@ Portfolio von Susanna Fill – statische Seite, gehostet auf Vercel.
 - `style.css`, `app.js` – Gestaltung und Bilderspur im Hero
 
 Jeder Push auf `main` wird von Vercel automatisch gebaut und veröffentlicht.
+
+Live: https://susanna-fill-site.vercel.app
