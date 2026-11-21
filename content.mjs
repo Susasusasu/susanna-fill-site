@@ -209,15 +209,9 @@ export const projects = [
   {
     slug: "hornbach-hammer", oldSlug: "/the-hornbach-hammer",
     client: "HORNBACH", title: "The HORNBACH HAMMER",
+    // Bild 1 bleibt nur Kachelbild auf der Startseite
+    order: ["vid1", "img2", "img3", "img4", "img5", "img6", "img7", "img8"],
     agency: "Heimat Berlin", // www.heimat-berlin.com
-    text: [
-      "\"THE HORNBACH HAMMER\" Case",
-      "Exclusive packaging.",
-      "Billboard.",
-      "Posters.",
-      "Website for desktop and mobile devices: hornbach.de/hammer",
-      "Living CLP.",
-    ],
     videos: ["https://vimeo.com/516136604"],
     images: [
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1397957119811-F5VZ9XGVKC02ZUKU2FEG/Bildschirmfoto+2014-04-19+um+02.15.19.png",
