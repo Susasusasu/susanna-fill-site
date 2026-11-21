@@ -288,6 +288,8 @@ export const projects = [
   {
     slug: "life", oldSlug: "/new-page-1",
     client: "Life", title: "",
+    // Bild 1 bleibt Kachel- und Animationsbild, wird auf der Seite aber nicht gezeigt
+    order: ["img2", "img3", "img4", "img5", "img6", "img7"],
     images: [
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1626689272310-4W9SZSSPLD37ITW93R8Z/IMG_1013.jpeg",
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1613938633137-GKK6W2DWY72WY304N6GG/B7F41208-657D-4232-BB51-8425C46EA195.jpg",
