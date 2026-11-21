@@ -53,6 +53,8 @@ export const projects = [
     slug: "ochsner-sport-viele-linien", oldSlug: "/vielelinien",
     client: "Ochsner Sport", title: "Viele Linien führen ins Ziel.",
     videos: ["https://vimeo.com/1238699398"],
+    // Bild 1 bleibt Kachelbild auf der Startseite, wird auf der Projektseite aber nicht gezeigt
+    order: ["vid1", "img2", "img3", "img4", "img5", "img6"],
     images: [
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1792742050865-KFMQELZ3KZWV9N3YMI8F/image-asset.jpeg",
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1792597744010-J7AGPZB3YP5AHD1VGJTF/261019+OSP+WInterkampagne+2026+STILL+1920x1080px+DE5.jpg",
