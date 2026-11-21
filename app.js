@@ -61,16 +61,10 @@
 })();
 
 
-// Nachtmodus-Umschalter (merkt sich die Wahl im Browser)
+// Tag/Nacht folgt automatisch der Einstellung des Geräts (auch wenn sie sich ändert)
 (() => {
-  const btn = document.querySelector(".theme-toggle");
-  if (!btn) return;
-  const root = document.documentElement;
-  const label = () => { btn.setAttribute("aria-checked", root.dataset.theme === "dark" ? "true" : "false"); };
-  label();
-  btn.addEventListener("click", () => {
-    root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
-    try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
-    label();
-  });
+  const mq = matchMedia("(prefers-color-scheme: dark)");
+  const apply = () => { document.documentElement.dataset.theme = mq.matches ? "dark" : "light"; };
+  apply();
+  mq.addEventListener ? mq.addEventListener("change", apply) : mq.addListener(apply);
 })();

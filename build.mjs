@@ -46,14 +46,14 @@ ${noindex ? '<meta name="robots" content="noindex, follow">\n' : ""}<meta proper
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..900&display=swap" rel="stylesheet">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/style.css">
-<script>try{var t=localStorage.getItem("theme");if(!t)t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t}catch(e){}</script>
+<script>try{localStorage.removeItem("theme")}catch(e){}document.documentElement.dataset.theme=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"</script>
 </head>
 <body>
 <a class="skip" href="#main">Zum Inhalt</a>
 <header class="nav">
   <nav class="nav-l" aria-label="Seiten"><a href="/#work">Work</a><a href="/#about">About</a></nav>
   <a class="nav-c" href="/">Susanna Fill</a>
-  <nav class="nav-r" aria-label="Kontakt"><a href="${site.contact.linkedin}" target="_blank" rel="noopener">LinkedIn</a><a href="/#contact">Contact</a><button class="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Nachtmodus"><svg class="ico sun" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M3 3l1.4 1.4M11.6 11.6 13 13M3 13l1.4-1.4M11.6 4.4 13 3"/></svg><svg class="ico moon" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 9.5A5.5 5.5 0 0 1 6.5 3a5.5 5.5 0 1 0 6.5 6.5z"/></svg><span class="knob"></span></button></nav>
+  <nav class="nav-r" aria-label="Kontakt"><a href="${site.contact.linkedin}" target="_blank" rel="noopener">LinkedIn</a><a href="/#contact">Contact</a></nav>
 </header>
 `;
 
