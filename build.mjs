@@ -103,7 +103,7 @@ const ld = `\n<script type="application/ld+json">${JSON.stringify(jsonld).replac
 const home = `${head("Susanna Fill – Art Direction", homeDesc, { extra: ld })}
 <main id="main">
   <section class="hero" data-trail='${esc(JSON.stringify(trail))}' aria-labelledby="hero-h">
-    <h1 id="hero-h" class="name">Art<br>Direction</h1>
+    <h1 id="hero-h" class="name"><span class="art">Art</span><br>Direction</h1>
   </section>
 
   <section id="work" class="work" aria-labelledby="work-h">
