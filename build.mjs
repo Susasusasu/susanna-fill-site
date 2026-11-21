@@ -79,7 +79,8 @@ const card = (p, i) => {
     </li>`;
 };
 
-const trail = projects.map((p) => p.cover || thumb(p.images[0]));
+// Bilder für die Animation im Hero – mit demselben Ausschnitt wie die Kachel (coverPosition)
+const trail = projects.map((p) => (p.coverPosition ? { s: p.cover || thumb(p.images[0]), p: p.coverPosition } : p.cover || thumb(p.images[0])));
 
 const jsonld = {
   "@context": "https://schema.org",

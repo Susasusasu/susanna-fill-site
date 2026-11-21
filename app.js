@@ -10,7 +10,9 @@
   const spawn = (x, y, cls = "") => {
     const img = document.createElement("img");
     img.className = `trail-img ${cls}`.trim();
-    img.src = srcs[idx++ % srcs.length];
+    const t = srcs[idx++ % srcs.length];
+    img.src = typeof t === "string" ? t : t.s;
+    if (t.p) img.style.objectPosition = `center ${t.p}`;
     img.alt = "";
     img.style.left = `${x}px`;
     img.style.top = `${y}px`;
@@ -24,7 +26,7 @@
     return;
   }
 
-  srcs.forEach((s) => { const i = new Image(); i.src = s; }); // vorladen
+  srcs.forEach((s) => { const i = new Image(); i.src = typeof s === "string" ? s : s.s; }); // vorladen
 
   // Automatischer Ablauf
   let timer = null;
