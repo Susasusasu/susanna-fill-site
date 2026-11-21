@@ -214,7 +214,7 @@ export const projects = [
     slug: "hornbach-hammer", oldSlug: "/the-hornbach-hammer",
     client: "HORNBACH", title: "The HORNBACH HAMMER",
     // Bild 1 bleibt nur Kachelbild auf der Startseite
-    order: ["vid1", "img2", "img3", "img4", "img5", "img6", "img7", "img8"],
+    order: ["vid1", "img2", "img3", "img4", "img5", "img6", "img7"],
     agency: "Heimat Berlin", // www.heimat-berlin.com
     videos: ["https://vimeo.com/516136604"],
     images: [
