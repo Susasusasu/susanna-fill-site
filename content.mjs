@@ -237,6 +237,7 @@ export const projects = [
   {
     slug: "hornbach-no-one-feels-it", oldSlug: "/no-one-feels-it-like-you-do-hornbach",
     client: "HORNBACH", title: "No one feels it, like you do",
+    order: ["vid1", "vid2", "img1", "img2", "img3", "img4"],
     agency: "Heimat Berlin", // www.heimat-berlin.com
     text: [
       "\"Symphony\" TVC",
