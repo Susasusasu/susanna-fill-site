@@ -66,7 +66,7 @@
   const btn = document.querySelector(".theme-toggle");
   if (!btn) return;
   const root = document.documentElement;
-  const label = () => { btn.textContent = root.dataset.theme === "dark" ? "Day" : "Night"; };
+  const label = () => { btn.setAttribute("aria-checked", root.dataset.theme === "dark" ? "true" : "false"); };
   label();
   btn.addEventListener("click", () => {
     root.dataset.theme = root.dataset.theme === "dark" ? "light" : "dark";
