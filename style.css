@@ -52,8 +52,6 @@ ul { list-style: none; margin: 0; padding: 0; }
   font-size: clamp(56px, 13.5vw, 196px); line-height: .84; letter-spacing: -0.045em;
   position: relative; z-index: 2; pointer-events: none;
 }
-/* «ART» etwas luftiger, damit es optisch zu «DIRECTION» passt (margin gleicht den Mehrabstand am Wortende aus) */
-.name .art { letter-spacing: -0.02em; margin-right: -0.025em; }
 .lede { margin: 28px 0 0; font-size: clamp(16px, 1.6vw, 20px); font-weight: 600; position: relative; z-index: 2; }
 .trail-img {
   position: absolute; z-index: 1; width: clamp(160px, 22vw, 340px); aspect-ratio: 4 / 3; object-fit: cover;
