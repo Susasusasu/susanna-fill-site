@@ -156,6 +156,8 @@ export const projects = [
   {
     slug: "mcdrive-small-moments", oldSlug: "/mcdrive",
     client: "McDrive", title: "Small moments make a big difference",
+    // Bild 1 bleibt nur Kachelbild auf der Startseite
+    order: ["vid1"],
     videos: ["https://vimeo.com/545879067"],
     images: [
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1635945978979-G5S7IELXTKMMRP2TR55R/Bildschirmfoto+2021-11-03+um+14.16.09.png",
