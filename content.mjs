@@ -232,10 +232,6 @@ export const projects = [
     slug: "hornbach-what-will-remain", oldSlug: "/and-what-will-remain-of-you",
     client: "HORNBACH", title: "And what will remain of you?",
     agency: "Heimat Berlin", // www.heimat-berlin.com
-    text: [
-      "Become immortal. Build a stair. And what will remain of you? HORNBACH. Home Improvement Superstores.",
-      "Your deeds will speak for you forever. And what will remain of you? HORNBACH. Home Improvement Superstores.",
-    ],
     images: [
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1396296632609-W55XPT1JS7NPHG45V15Z/020913_HOR_UWBVD_Layout_ProjektionNEU53.jpg",
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1396296632876-V0TX16A0X9XK8MB5TQLC/020913_HOR_UWBVD_Layout_ProjektionNEU52.jpg",
