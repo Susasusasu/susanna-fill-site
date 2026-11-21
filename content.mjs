@@ -175,6 +175,7 @@ export const projects = [
   {
     slug: "bild", oldSlug: "/bild",
     client: "Bild", title: "Das bringt nur BILD",
+    order: ["vid1", "img1", "img3", "img4", "img5", "img6", "img7", "img8", "img9", "img10", "img11", "img12", "img13"],
     coverPosition: "top", // Ausschnitt der Kachel: top | center | bottom
     videos: ["https://vimeo.com/516118217"],
     images: [
