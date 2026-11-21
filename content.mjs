@@ -118,6 +118,8 @@ export const projects = [
   {
     slug: "coop-grill", oldSlug: "/coop-grill",
     client: "COOP", title: "Grill",
+    // Bild 1 bleibt nur Kachelbild auf der Startseite
+    order: ["vid1", "vid2", "img2"],
     text: [
       "COOP – Mango Jerry",
     ],
