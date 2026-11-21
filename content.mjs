@@ -239,13 +239,6 @@ export const projects = [
     client: "HORNBACH", title: "No one feels it, like you do",
     order: ["vid1", "vid2", "img1", "img2", "img3", "img4"],
     agency: "Heimat Berlin", // www.heimat-berlin.com
-    text: [
-      "\"Symphony\" TVC",
-      "Print & OOH.",
-      "Special OOH.",
-      "Print.",
-      "\"Crack\" TVC",
-    ],
     videos: ["https://vimeo.com/516121198", "https://vimeo.com/516144701"],
     images: [
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1614159543591-L77K7MLAE4QY9L7S5E30/Bildschirmfoto+2014-04-19+um+02.22.35.png",
