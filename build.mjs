@@ -55,7 +55,7 @@ const card = (p, i) => {
   return `
     <li class="card">
       <a href="/${p.slug}">
-        <div class="card-img"><img src="${thumb(p.images[0])}" alt="${esc(label(p))}" loading="${i < 4 ? "eager" : "lazy"}" width="1600" height="900"></div>
+        <div class="card-img"><img src="${thumb(p.images[0])}"${p.coverPosition ? ` style="object-position: center ${p.coverPosition}"` : ""} alt="${esc(label(p))}" loading="${i < 4 ? "eager" : "lazy"}" width="1600" height="900"></div>
         <div class="card-meta">
           <h3>${esc(p.client)}</h3>${p.title ? `<p>${esc(p.title)}</p>` : ""}
         </div>

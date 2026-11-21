@@ -161,6 +161,7 @@ export const projects = [
   {
     slug: "bild", oldSlug: "/bild",
     client: "Bild", title: "Das bringt nur BILD",
+    coverPosition: "top", // Ausschnitt der Kachel: top | center | bottom
     videos: ["https://vimeo.com/516118217"],
     images: [
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1614101931527-K5OLPP56TDAO168MNG4W/bild.jpg",
