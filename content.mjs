@@ -135,6 +135,7 @@ export const projects = [
   {
     slug: "mcdrive-my-favorite-restaurant", oldSlug: "/mcdrive-small-things-make-a-big-difference",
     client: "McDrive", title: "My favorite restaurant",
+    cover: "/thumbs/mcdrive-my-favorite-restaurant/cover.jpg", // eigenes Kachelbild (ohne Logo rechts)
     images: [
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1636485227568-RNZ28BKM5FMECFSL89G8/211020_McDo_thefavoriterestaurant_final_EN_RGB_carwash.jpg",
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1636485233735-OIK0CDM0GMKL10AQ2S78/211020_McDo_thefavoriterestaurant_final_EN_RGB_construction.jpg",
