@@ -94,6 +94,8 @@ export const projects = [
     slug: "naturaplan", oldSlug: "/new-page-3",
     client: "NATURAPLAN", title: "Bio liegt in unserer Natur",
     videos: ["https://vimeo.com/794561070"],
+    // Bild 1 bleibt nur Kachelbild auf der Startseite
+    order: ["vid1", "img2", "img3", "img4", "img5", "img6"],
     images: [
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1675787344080-5GRLIZEO6WWTP4NZRGBL/Bildschirmfoto+2023-02-07+um+17.28.09.png",
       "https://images.squarespace-cdn.com/content/v1/53386fe9e4b0753fa1640922/1675163362286-GMQR4ZPDKFREPAU6QOEO/230124_CNP_PR-Mitteilung_OOH_2.jpg",
