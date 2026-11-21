@@ -143,9 +143,12 @@ const media = (p) => {
   const im = (u, k) => `<img src="${img(u, 2500)}" alt="${esc(label(p))}, Bild ${k + 1}" loading="${k < 2 ? "eager" : "lazy"}">`;
   const videos = p.videos || [];
   const order = p.order || [...videos.map((_, k) => `vid${k + 1}`), ...p.images.map((_, k) => `img${k + 1}`)];
+  const link = (l) => `<a class="video video-link" href="${l.url}" target="_blank" rel="noopener"><img src="${img(p.images[(l.poster || 1) - 1])}" alt="${esc(label(p))}, Film" loading="eager"><span class="play" aria-hidden="true"></span><span class="video-label">${esc(l.label || "Film ansehen")} ↗</span></a>`;
   return order.map((t) => {
-    const n = parseInt(t.slice(3), 10) - 1;
-    return t.startsWith("vid") ? vid(videos[n]) : im(p.images[n], n);
+    const n = parseInt(t.replace(/^\D+/, ""), 10) - 1;
+    if (t.startsWith("vid")) return vid(videos[n]);
+    if (t.startsWith("link")) return link(p.links[n]);
+    return im(p.images[n], n);
   });
 };
 
