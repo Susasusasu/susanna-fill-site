@@ -13,6 +13,7 @@ for (const p of projects) p.images.forEach((u, k) => {
   localMap.set(u, `/images/${p.slug}/${String(k + 1).padStart(2, "0")}.jpg`);
 });
 const img = (u) => localMap.get(u) || u;
+const thumb = (u) => img(u).replace("/images/", "/thumbs/"); // 1000-px-Version für Kacheln
 const vimeoId = (u) => u.match(/(\d+)/)[1];
 const label = (p) => (p.title ? `${p.client} /// ${p.title}` : p.client);
 
@@ -50,17 +51,22 @@ const foot = `
 
 const arrow = `<svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M4.5 11.5l7-7M5.5 4.5h6v6" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>`;
 
-const card = (p, i) => `
+// Printprojekte (ohne Video): beim Hover durch die Motive blättern
+const card = (p, i) => {
+  const hover = !(p.videos && p.videos.length) && p.images.length > 1
+    ? ` data-hover='${esc(JSON.stringify(p.images.map(thumb)))}'` : "";
+  return `
     <li class="card">
       <a href="/${p.slug}">
-        <div class="card-img"><img src="${img(p.images[0], 1000)}" alt="${esc(label(p))}" loading="${i < 4 ? "eager" : "lazy"}" width="1600" height="900"></div>
+        <div class="card-img"${hover}><img src="${thumb(p.images[0])}" alt="${esc(label(p))}" loading="${i < 4 ? "eager" : "lazy"}" width="1600" height="900"></div>
         <div class="card-meta">
           <h3>${esc(p.client)}</h3>${p.title ? `<p>${esc(p.title)}</p>` : ""}
         </div>
       </a>
     </li>`;
+};
 
-const trail = projects.map((p) => img(p.images[0], 750));
+const trail = projects.map((p) => thumb(p.images[0]));
 
 const home = `${head("Susanna Fill /// Art Direction")}
 <main id="main">
@@ -133,6 +139,7 @@ await writeFile(`${OUT}/404.html`, `${head("Seite nicht gefunden — Susanna Fil
 const vercel = { buildCommand: "node build.mjs", outputDirectory: "out", framework: null, cleanUrls: true, trailingSlash: false, redirects };
 await writeFile("vercel.json", JSON.stringify(vercel, null, 2) + "\n");
 await cp("images", `${OUT}/images`, { recursive: true });
+await cp("thumbs", `${OUT}/thumbs`, { recursive: true });
 await copyFile("style.css", `${OUT}/style.css`);
 await copyFile("app.js", `${OUT}/app.js`);
 await writeFile(`${OUT}/favicon.svg`, `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#000"/><text x="32" y="44" font-family="Arial Black,Arial,sans-serif" font-weight="900" font-size="30" fill="#fff" text-anchor="middle">SF</text></svg>`);
