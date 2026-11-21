@@ -197,6 +197,8 @@ export const projects = [
   {
     slug: "hornbach-act-against-ugliness", oldSlug: "/act-against-ugliness-hornbach",
     client: "HORNBACH", title: "Act against ugliness",
+    // Bild 1 bleibt nur Kachelbild auf der Startseite
+    order: ["vid1", "img2", "img3", "img4"],
     agency: "Heimat Berlin", // www.heimat-berlin.com
     videos: ["https://vimeo.com/104961829"],
     images: [
