@@ -24,7 +24,7 @@ const TODAY = new Date().toISOString().slice(0, 10);
 const FEATURED = ["ochsner-sport-viele-linien", "swiss-all-the-way", "swiss-eishockey-wm"];
 const NOINDEX = ["life"];
 const homeDesc = "Susanna Fill, Art Director in Zürich. Kampagnen für Ochsner Sport («Viele Linien führen ins Ziel.»), SWISS («Swiss all the way.», Eishockey-WM), Coop, McDonald’s, HORNBACH und BILD.";
-const projDesc = (p) => `${label(p)}${p.agency ? ` (${p.agency})` : ""}. Kampagne mit Art Direction von Susanna Fill, Zürich.`;
+const projDesc = (p) => `${label(p).replace(/\.$/, "")}${p.agency ? ` (${p.agency})` : ""}. Kampagne mit Art Direction von Susanna Fill, Zürich.`;
 
 const head = (title, desc = homeDesc, { path = "/", image = projects[0].images[0], noindex = false, extra = "" } = {}) => `<!doctype html>
 <html lang="de">
