@@ -110,7 +110,7 @@ export const projects = [
     slug: "coop-grill", oldSlug: "/coop-grill",
     client: "COOP", title: "Grill",
     text: [
-      "COOP /// Mango Jerry",
+      "COOP – Mango Jerry",
     ],
     videos: ["https://vimeo.com/772337629", "https://vimeo.com/772337721"],
     images: [
