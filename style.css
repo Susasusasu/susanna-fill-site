@@ -4,7 +4,6 @@
   --grey: #6b6b6b;
   --soft: #8a8a8a;
   --line: #e7e7e7;
-  --chamfer: clamp(18px, 2.4vw, 32px);
   --wrap: 1040px;
   font-family: "Inter", system-ui, sans-serif;
   font-optical-sizing: auto;
@@ -66,13 +65,12 @@ ul { list-style: none; margin: 0; padding: 0; }
 .work, .about, .contact { max-width: var(--wrap); margin: 0 auto; padding: 0 24px clamp(80px, 10vw, 140px); }
 .grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: clamp(36px, 4vw, 56px) 14px; }
 .card a { display: block; }
-.card-img { clip-path: polygon(var(--chamfer) 0, 100% 0, 100% calc(100% - var(--chamfer)), calc(100% - var(--chamfer)) 100%, 0 100%, 0 var(--chamfer)); background: #f2f2f2; overflow: hidden; }
-.card-img img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.card-img { border-radius: 5px; background: #f2f2f2; overflow: hidden; }
+.card-img img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
 .card a:hover .card-img img { transform: scale(1.03); }
-.card-meta { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding-top: 12px; }
+.card-meta { padding-top: 12px; }
 .card h3 { margin: 0; font-size: 20px; line-height: 1.2; font-weight: 700; letter-spacing: -0.01em; }
 .card p { margin: 4px 0 0; color: var(--grey); font-size: 15px; font-weight: 500; }
-.btn-arrow { flex: none; display: grid; place-items: center; width: 26px; height: 26px; background: var(--ink); color: var(--paper); border-radius: 3px; margin-top: 2px; }
 
 /* About */
 .cv { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; }
