@@ -92,7 +92,7 @@ export const projects = [
   },
   {
     slug: "naturaplan", oldSlug: "/new-page-3",
-    client: "NATURAPLAN", title: "Bio liegt in unserer Natur",
+    client: "NATURAPLAN", title: "Bio liegt in unserer Natur.",
     videos: ["https://vimeo.com/794561070"],
     // Bild 1 bleibt nur Kachelbild auf der Startseite
     order: ["vid1", "img2", "img3", "img4", "img5", "img6"],
