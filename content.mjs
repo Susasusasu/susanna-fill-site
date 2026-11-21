@@ -276,6 +276,7 @@ export const projects = [
   {
     slug: "hornbach-madness", oldSlug: "/madness",
     client: "HORNBACH", title: "How much madness are you made of?",
+    order: ["vid1", "img1", "img2", "img3", "img4", "img5"],
     agency: "Heimat Berlin", // www.heimat-berlin.com
     text: [
       "\"How much madness are you made of?\" TVC. HORNBACH. Home Improvement Superstores.",
